@@ -32,6 +32,7 @@ class RockPaperScissors {
    * @param {string} cpuSelection computer selection. Can only be one of the following values [`rock`, `paper`, `scissors`]
    */
   determineWinner(userSelection, cpuSelection){
+    userSelection = userSelection.toLocaleLowerCase();
     if((userSelection === "rock" && cpuSelection === "scissors") || (userSelection ==="paper" && cpuSelection === "rock") || (userSelection === "scissors" && cpuSelection === "paper"))
       return "win";
     else if((userSelection === "rock" && cpuSelection === "rock") || (userSelection ==="paper" && cpuSelection === "paper") || (userSelection === "scissors" && cpuSelection === "scissors"))
