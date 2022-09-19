@@ -22,7 +22,7 @@ function updateScoreTallyUI(){
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
-gameHistoryParagraph.innerHTML = game.gameHistoryLog;
+gameHistoryParagraph.innerHTML = game.gameHistoryLog.join("<br></br>");
 }
 
 // start-game-button EventListener
@@ -44,7 +44,9 @@ goButton.addEventListener(`click`, function (e) {
   updateGameHistoryUI();
 
 });
-
+userName.addEventListener('click',function(){
+    username.select();
+})
 // If you're doing the extra-credit, uncomment the below: reset-game-button
 // resetGameButton.addEventListener(`click`, function(e) { 
   
