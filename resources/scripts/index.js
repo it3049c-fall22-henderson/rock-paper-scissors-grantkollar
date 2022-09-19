@@ -36,7 +36,7 @@ startGameButton.addEventListener(`click`, function (e) {
 });
 
 // go-button EventListener
-goButton.addEventListener(`click`, function () {
+goButton.addEventListener(`click`, function (e) {
   e.preventDefault();
   let usr_option = userSelection.options[userSelection.selectedIndex].value;
   game.play(usr_option);
